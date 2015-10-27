@@ -21,7 +21,12 @@ gulp.task('bundle', function() {
     .pipe(gulp.dest('./.tmp'));
 })
 
-gulp.task('serve', ['bundle', 'live-server'], function() {
+gulp.task('copy', function() {
+  gulp.src(['app/*.css'])
+    .pipe(gulp.dest('./.tmp'));
+})
+
+gulp.task('serve', ['copy', 'bundle', 'live-server'], function() {
   browserSync.init(null, {
     proxy: "http://localhost:7777",
     port: 9001
