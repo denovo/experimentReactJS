@@ -1,2 +1,2 @@
 # experimentReactJS
-trying out learning ReactJS from Pluralsight tutorial
+testing out ReactJS
